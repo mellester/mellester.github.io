@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>Video</title>
+
+  <link href="http://vjs.zencdn.net/4.12/video-js.css" rel="stylesheet">
+  <script src="http://vjs.zencdn.net/4.12/video.js"></script>
+ <script src="https://github.com/videojs/videojs-contrib-media-sources/releases/download/v0.1.0/videojs-media-sources.js"></script>
+  <script src="https://github.com/videojs/videojs-contrib-hls/releases/download/v0.11.2/videojs.hls.min.js"></script>
+
+</head>
+<body>
+  <h1>Video</h1>
+
+  <video id="my_video_1" class="video-js vjs-default-skin" controls preload="auto" width="640" height="268" 
+  data-setup='{}'>
+    <source src="https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1592441505/ei/QWbqXrezH8Px1gLfo76ICQ/ip/2001:1c01:3bcf:2400:c1f8:b4da:3910:c342/id/pczO7c382Fo.0/itag/94/source/yt_live_broadcast/requiressl/yes/ratebypass/yes/live/1/goi/160/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D135/hls_chunk_host/r3---sn-5hnekn7s.googlevideo.com/playlist_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/11370/mh/XL/mm/44/mn/sn-5hnekn7s/ms/lva/mv/m/mvi/2/pl/24/dover/11/keepalive/yes/mt/1592419820/disable_polymer/true/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,goi,sgoap,sgovp,playlist_duration,manifest_duration,vprv,playlist_type/sig/AOq0QJ8wRAIgKlrggiyvU_C9sq_hCYqPrg_GQvhiY8de4YydoqWFU28CIB-MsJuJ1P7OuCKJFIbw-kv8DA-IGQWcDz2oGf9Hr89x/lsparams/hls_chunk_host,initcwndbps,mh,mm,mn,ms,mv,mvi,pl/lsig/AG3C_xAwRAIgWLSLKyvPbh7DMheSCOMBfDMBJFOyODHIY4ce5BF5-m4CIE64keIkzkwTbiuCpgagij2iwLi_bz4mlVDZDXR2MK4T/playlist/index.m3u8" type='application/x-mpegURL'>
+  </video>
+
+  <script>
+  var player = videojs('my_video_1');
+  </script>
+
+</body>
+</html>
