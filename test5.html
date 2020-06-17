@@ -4,16 +4,16 @@
    <link href="https://cdnjs.cloudflare.com/ajax/libs/video.js/7.8.3/video.min.js" rel="stylesheet" />
 </head>
 <body>
-<video id=example-video width=960 height=540 class="video-js vjs-default-skin" controls>
-  <source
-     src="https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1592441779/ei/U2fqXuevA4eF-gaH3L2gCg/ip/2001:1c01:3bcf:2400:c1f8:b4da:3910:c342/id/pczO7c382Fo.0/itag/301/source/yt_live_broadcast/requiressl/yes/ratebypass/yes/live/1/goi/160/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D299/hls_chunk_host/r3---sn-5hnekn7s.googlevideo.com/playlist_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/11300/mh/XL/mm/44/mn/sn-5hnekn7s/ms/lva/mv/m/mvi/2/pl/24/dover/11/keepalive/yes/fexp/23882513/mt/1592420060/disable_polymer/true/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,goi,sgoap,sgovp,playlist_duration,manifest_duration,vprv,playlist_type/sig/AOq0QJ8wRQIgEhc0VeHUsZXp34W_7HYLNaejlO-PqvrOqLPjm27FBXYCIQCpp9FhRs_6427DdhvzZx5jWHI-iU2xtzH8Nu_4PNS6Ag%3D%3D/lsparams/hls_chunk_host,initcwndbps,mh,mm,mn,ms,mv,mvi,pl/lsig/AG3C_xAwRAIgBLz1KRa2x30TZhtzCd3UyMqX43mkE3ZMed19LCGm3ssCIEr48qswxf5Y27WyZAb2K96twu6-2UPQKEyTSfynRFu6/playlist/index.m3u8"
-     type="application/x-mpegURL">
-</video>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/video.js/7.8.3/video.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-youtube/2.6.1/Youtube.min.js"></script>
 <script>
-var player = videojs('example-video');
-player.play();
+var mimeCodec = 'video/mp4; codecs="avc1.4D401F"';
+if (MediaSource.isTypeSupported(mimeCodec)) {
+  // Create Media Source
+  var mediaSource = new MediaSource(); // mediaSource.readyState === 'closed'
+} else {
+  document.writeln("Unsupported media format");
+}
 </script>
 
 </body>
