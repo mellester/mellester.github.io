@@ -1,20 +1,20 @@
 <!DOCTYPE html>
-
+<html>
 <head>
-<link href="//vjs.zencdn.net/7.8.2/video-js.min.css" rel="stylesheet">
-<script src="//vjs.zencdn.net/7.8.2/video.min.js"></script>
+  <link type="text/css" rel="stylesheet" href="../node_modules/video.js/dist/video-js.min.css" />
 </head>
-
 <body>
+  <video
+    id="vid1"
+    class="video-js vjs-default-skin"
+    controls
+    autoplay
+    width="640" height="264"
+    data-setup='{ "techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "https://www.youtube.com/embed/pczO7c382Fo"}] }'
+  >
+  </video>
 
-<iframe  src="https://www.youtube.com/embed/pczO7c382Fo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <script src="../node_modules/video.js/dist/video.min.js"></script>
+  <script src="../dist/Youtube.min.js"></script>
 </body>
-
 </html>
-    
-    
-    
-    
-    
-    
-    
