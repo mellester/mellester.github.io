@@ -9,11 +9,16 @@
     class="video-js vjs-default-skin"
     controls
     autoplay
-    data-setup='{ "techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "https://youtu.be/pczO7c382Fo"}] }'
+    data-setup='{ "techOrder": ["flash"], "sources": [{ "type": "video/mp4", "src": "https://youtu.be/pczO7c382Fo"}] }'
   >
   </video>
 
  <script src="https://cdnjs.cloudflare.com/ajax/libs/video.js/7.8.3/video.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/videojs-flash@2/dist/videojs-flash.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-youtube/2.6.1/Youtube.min.js"></script>
+  <script>
+  var player = videojs('vid1');
+  videojs('vid1', {techOrder: ['flash']});
+</script>
 </body>
 </html>
